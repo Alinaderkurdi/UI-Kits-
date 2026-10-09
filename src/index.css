@@ -5,6 +5,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/** Root variables for light and dark modes  so based on your set it should change later*/
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -32,9 +33,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  /*so desktop brake point read and review this later*/
+  /*
   @media (max-width: 1024px) {
     font-size: 16px;
   }
+  */
 
   --background: oklch(1 0 0);
 
@@ -97,6 +101,7 @@
   --sidebar-ring: oklch(0.708 0 0)
 }
 
+/* so its for dark mode color palette so leater read more about @media key word and matching it with your needs and themes*/
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;
@@ -111,27 +116,24 @@
     --shadow:
       rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
   }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
 }
 
+/* fixed units for sizes for now comment it and later change it*/
+
 #root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
+  width: 100%;
   min-height: 100svh;
-  display: flex;
-  flex-direction: column;
   box-sizing: border-box;
+  border : 1px solid red;
 }
 
 body {
   margin: 0;
 }
+
+
+
+/** stady this codes for more info 
 
 h1,
 h2 {
@@ -149,6 +151,8 @@ h1 {
     margin: 20px 0;
   }
 }
+
+
 h2 {
   font-size: 24px;
   line-height: 118%;
@@ -158,24 +162,11 @@ h2 {
     font-size: 20px;
   }
 }
-p {
-  margin: 0;
-}
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
+*/
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
-}
+
+
 
 @theme inline {
   --font-heading: var(--font-sans);
