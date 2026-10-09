@@ -116,6 +116,7 @@
     --shadow:
       rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
   }
+
 }
 
 /* fixed units for sizes for now comment it and later change it*/
@@ -124,7 +125,7 @@
   width: 100%;
   min-height: 100svh;
   box-sizing: border-box;
-  border : 1px solid red;
+  border : 1px solid red
 }
 
 body {
