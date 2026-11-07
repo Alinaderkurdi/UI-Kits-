@@ -1,0 +1,16 @@
+@reference '../../../index.css';
+
+
+.instagram-gradient {
+  @apply h-[100%] pt-8 flex justify-center ;
+  background: linear-gradient(
+    40deg,
+    #ffdc80 0%,
+    #fcaf45 4%,
+    #ff3040 30%,
+    #e1306c 50%,
+    #c13584 65%,
+    #833ab4 80%,
+    #5851db 100%
+  );
+}

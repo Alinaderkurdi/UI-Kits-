@@ -1,0 +1,86 @@
+
+.liquid-glass-bg {
+  width: 5rem;
+  height: 5rem;
+  aspect-ratio: 1;
+  border-radius: 22px;
+  position: relative;
+  isolation: isolate;
+
+  /* Gradient tint instead of flat 0.1 white: gives body on every background */
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.28) 0%,
+      rgba(255, 255, 255, 0.08) 50%,
+      rgba(255, 255, 255, 0.16) 100%
+    ),
+    rgba(120, 120, 140, 0.18); /* neutral tint so it doesn't vanish on white */
+
+  /* brightness/contrast keep it from washing out on light or dark colors */
+  -webkit-backdrop-filter: blur(20px) saturate(190%) brightness(1.05) contrast(1.05);
+  backdrop-filter: blur(20px) saturate(190%) brightness(1.05) contrast(1.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  box-shadow:
+    /* top highlight */
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.6),
+    /* bottom inner edge: visible on light backgrounds */
+    inset 0 -1px 0 rgba(0, 0, 0, 0.12),
+    /* soft inner glow */
+    inset 0 0 12px rgba(255, 255, 255, 0.12),
+    /* outer contact shadow: defines the edge on white */
+    0 0 0 0.5px rgba(0, 0, 0, 0.12),
+    0 8px 24px rgba(0, 0, 0, 0.22);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45); /* keeps text readable on light bg */
+  transition: transform 0.2s ease;
+}
+
+/*
+@media (prefers-color-scheme: light) {
+  .liquid-glass-bg {
+    background:
+      linear-gradient(135deg, rgba(255,255,255,0.45), rgba(255,255,255,0.15)),
+      rgba(90, 90, 110, 0.2);
+    color: #111;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
+  }
+}
+*/
+
+
+/*
+.liquid-glass-bg {
+  width: 5rem;
+  height: 5rem;
+  aspect-ratio: 1;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(40px) saturate(170%);
+  backdrop-filter: blur(40px) saturate(170%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    inset 0 1.2px 0 rgba(255, 255, 255, 0.5),
+    0 6px 20px rgba(0, 0, 0, 0.28);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+*/
